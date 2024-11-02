@@ -122,7 +122,6 @@ nav ul li a:hover {
 }
 
 /* Floating Shapes Styling for Background */
-/* Floating Shapes Styling */
 .floating-shapes {
   position: absolute;
   top: 0;
@@ -130,44 +129,50 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   z-index: 5;
+  overflow: hidden;
 }
 
+.shape {
+  position: absolute;
+  opacity: 0.9;
+}
+
+/* Shapes with colors and styles similar to the logo */
 .shape1 {
-  background-color: #ff6f61; /* Bright coral */
-  width: 120px; /* Increased size */
-  height: 120px;
-  top: 20%;
-  left: 10%;
+  background-color: #ff5252; /* Bright Red */
+  width: 40px;
+  height: 40px;
+  top: 15%;
+  left: 20%;
   border-radius: 50%;
 }
 
 .shape2 {
-  background-color: #fdd835; /* Yellow accent */
-  width: 140px; /* Increased size */
-  height: 140px;
+  background-color: #ffeb3b; /* Yellow */
+  width: 60px;
+  height: 60px;
   top: 50%;
-  left: 70%;
-  border-radius: 10%;
+  left: 15%;
+  transform: rotate(45deg); /* Rotate for square shape */
 }
 
 .shape3 {
-  background-color: #5e35b1; /* Deep purple */
-  width: 110px; /* Increased size */
-  height: 110px;
-  top: 80%;
-  left: 30%;
-  border-radius: 50%;
+  background-color: #8bc34a; /* Light Green */
+  width: 50px;
+  height: 50px;
+  top: 30%;
+  left: 70%;
+  border-radius: 10%; /* Slightly rounded square */
 }
 
 .shape4 {
-  background-color: #26c6da; /* Cyan */
-  width: 130px; /* Increased size */
-  height: 130px;
-  top: 30%;
-  left: 80%;
-  border-radius: 8%;
+  background-color: #2196f3; /* Blue */
+  width: 35px;
+  height: 35px;
+  top: 75%;
+  left: 40%;
+  border-radius: 50%;
 }
-
 /* About Section */
 #about {
   padding: 4rem 1rem;
@@ -350,137 +355,6 @@ nav ul li a:hover {
 }
 
 /* Web Development Section */
-.web-development-heading-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 320px;
-  height: 560px;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.web-development-heading {
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
-  padding: 10px;
-  font-size: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Styling for the details container */
-/* Styling for the details container */
-.web-development-details-container {
-  position: absolute;
-  top: 55%; /* Adjust to align with the heading vertically */
-  left: 40%; /* Position it just to the right of the heading */
-  transform: translate(-20%, -50%); /* Adjust position */
-  background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
-  color: #333;
-  padding: 45px 25px;
-  border-radius: 8px;
-  max-width: 1500px;
-  opacity: 0; /* Start hidden */
-  z-index: 1;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  font-size: 1rem;
-}
-
-/* Centering and Gradient Text for Heading */
-.web-line {
-  font-size: 2.5rem;
-  background: linear-gradient(to right, #ff6b6b, #ffd93d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0;
-}
-
-.development-line {
-  font-size: 2.5rem;
-  background: linear-gradient(to right, #5bc0eb, #9bc53d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0;
-}
-
-/* Floating Shapes Styling */
-.floating-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-}
-
-.shape {
-  position: absolute;
-  opacity: 0.8;
-}
-
-.shape1 {
-  background-color: #ff6b6b;
-  width: 30px;
-  height: 30px;
-  top: 20%;
-  left: 10%;
-  border-radius: 50%;
-}
-
-.shape2 {
-  background-color: #ffd93d;
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  left: 70%;
-  border-radius: 8%;
-}
-
-.shape3 {
-  background-color: #5bc0eb;
-  width: 25px;
-  height: 25px;
-  top: 80%;
-  left: 40%;
-  border-radius: 50%;
-}
-
-.shape4 {
-  background-color: #9bc53d;
-  width: 35px;
-  height: 35px;
-  top: 30%;
-  left: 20%;
-  border-radius: 8%;
-}
-.website-type {
-  margin-bottom: 10px;
-}
-
-.website-type strong {
-  display: block;
-  color: #ff6b6b;
-  font-weight: bold;
-  margin-bottom: 3px;
-}
-
-.website-type p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-
 
 
 

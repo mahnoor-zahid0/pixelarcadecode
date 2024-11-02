@@ -31,7 +31,7 @@ gsap.from(".web-development-heading-container", {
 
 // Animation for Web Development Details Container (Pop-out effect)
 gsap.to(".web-development-details-container", {
-  x: -50,        // Slide from left
+  x: 0,        // Slide from left
   opacity: 1,    // Fade in
   delay: 1.5,    // Sync delay with heading animation
   duration: 1,   // Animation duration
