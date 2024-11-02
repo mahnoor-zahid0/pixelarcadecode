@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Arcade Core</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- GSAP for animations -->
+  
+  <!-- Barba.js for smooth page transitions -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/@barba/core/2.9.7/barba.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome Icons -->
+
+</head>
+<body>
+
+  <!-- Navbar with Logo and Links -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Pixel Arcade Core Logo">
+    </div>
+    <ul>
+      <li><a href="index.html" data-barba="trigger">Home</a></li>
+      <li><a href="index.html" data-barba="trigger">About</a></li>
+      <li class="dropdown">
+        <a href="#services" data-barba="trigger">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="web-development.html">Web Development</a></li>
+          <li><a href="android-development.html">Android Development</a></li>
+          <li><a href="ios-development.html">iOS Mobile Application</a></li>
+          <li><a href="hybrid-development.html">Hybrid App Development</a></li>
+          <li><a href="graphic-design.html">Graphic Designing</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+        </ul>
+      </li>
+      <li><a href="#consultation" data-barba="trigger">Consult</a></li>
+      <li><a href="#contact" data-barba="trigger">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Barba.js Wrapper for Page Transitions -->
+  <div id="barba-wrapper">
+    <div class="barba-container" data-barba="container">
+
+      <!-- Hero Section with Animated Text and Floating Shapes -->
+      <section id="hero">
+        <div class="floating-shapes">
+          <div class="shape shape1"></div>
+          <div class="shape shape2"></div>
+          <div class="shape shape3"></div>
+          <div class="shape shape4"></div>
+        </div>
+        <div class="overlay-text">
+          <h1 class="animate-text">Pixel Arcade Core</h1>
+          <p id="typing-text" class="animate-text"></p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="about-container">
+          
+          <!-- Introductory Content with Light Background -->
+          <div class="about-intro">
+            <h2 class="about-title about-heading-gradient animate-text">ABOUT US</h2>
+            <p class="about-description animate-text">
+              <strong>At Pixel Arcade Core, we believe that every idea deserves to be brought to life with creativity, precision, and purpose.</strong> We are more than just a digital solutions company—we are storytellers, innovators, and dream builders. Our team of passionate designers, developers, and strategists are united by a single mission: to empower ideas through digital artistry and cutting-edge technology.
+            </p>
+            <p class="about-description animate-text">
+              From web and mobile applications to immersive graphics and hybrid platforms, we craft experiences that connect, inspire, and leave a lasting impression. We blend creativity with technical excellence to produce solutions that are not only functional but also captivating and impactful. Our approach is collaborative and personalized, ensuring that every project reflects the unique vision and needs of our clients.
+            </p>
+          </div>
+          
+          <!-- "Why Us" Section with a Different Light Background -->
+          <div class="about-why-us">
+            <p class="about-description animate-text">
+              <strong>Why Pixel Arcade Core?</strong> Because we don’t just create digital products; we create digital experiences that elevate brands and bring them closer to their audiences. Innovation drives us, and quality defines us. When you partner with us, you’re not just choosing a service—you’re choosing a team that is as invested in your success as you are.
+            </p>
+            <p class="about-description animate-text">
+              Let’s build something extraordinary together. Welcome to Pixel Arcade Core, where ideas take shape, creativity has no limits, and possibilities are endless.
+            </p>
+          </div>
+          
+        </div>
+      </section>
+      
+      <!-- Services Section -->
+      <section id="services">
+        <h2 class="services-title services-title-gradient">OUR SERVICES</h2>
+        <div class="services-grid">
+      
+          <!-- Service Cards without Background Images -->
+         <div class="service-card">
+            <div class="service-content">
+              <h3 >Web Development</h3>
+              <a href="web-development.html" class="details-button">Details</a>
+            </div>
+          </div>
+      
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Android Development</h3>
+              <a href="android-development.html" class="details-button">Details</a>
+            </div>
+          </div>
+      
+          <div class="service-card">
+            <div class="service-content">
+              <h3>iOS Mobile Application</h3>
+              <a href="ios-development.html" class="details-button">Details</a>
+            </div>
+          </div>
+      
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Hybrid App Development</h3>
+              <a href="hybrid-development.html" class="details-button">Details</a>
+            </div>
+          </div>
+      
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Graphic Designing</h3>
+              <a href="graphic-design.html" class="details-button">Details</a>
+            </div>
+          </div>
+      
+          <div class="service-card">
+            <div class="service-content">
+              <h3>Hosting</h3>
+              <a href="hosting.html" class="details-button">Details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="consultation">
+        <div class="consultation-container">
+          <h2>Get Your Free Consultation</h2>
+          <p>At Pixel Arcade Core, we believe in helping you realize your ideas. Book a free consultation with us, where we’ll discuss your needs and provide expert guidance on how we can turn your vision into a reality. Our team is available 24/7 to assist you!</p>
+          <a href="#contact" class="consultation-button">Book a Consultation</a>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="vision">
+  <h2>Our Vision</h2>
+  <div class="vision-content">
+    <div class="vision-item">
+      <p><strong>Innovation</strong>: We are driven by a commitment to innovate and push the boundaries of digital creativity. Our goal is to deliver solutions that are not only functional but also ahead of the curve.</p>
+    </div>
+    <div class="vision-item">
+      <p><strong>Quality</strong>: Quality is at the core of everything we do. We ensure that our services meet the highest standards, delivering exceptional results that leave a lasting impact.</p>
+    </div>
+    <div class="vision-item">
+      <p><strong>Customer-Centric Approach</strong>: Our clients are at the heart of our business. We listen, understand, and collaborate closely to bring their visions to life.</p>
+    </div>
+  </div>
+</section>
+
+      
+  <!-- Footer Section -->
+  <footer id="contact">
+    <div class="footer-container">
+      <!-- Company Info -->
+      <div class="footer-info">
+        <img src="logo.png" alt="Pixel Arcade Core Logo" class="footer-logo">
+        <p>Pixel Arcade Core</p>
+        <p>Empowering Ideas with Digital Creativity</p>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="footer-contact">
+        <p><i class="fas fa-map-marker-alt"></i> Mandi Bahauddin, Pakistan</p>
+        <p><i class="fas fa-phone-alt"></i> +92 344 6373796</p>
+        <p><i class="fas fa-phone-alt"></i> +92 316 7947578</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:pixelarcadecore@gmail.com">pixelarcadecore@gmail.com</a></p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-nav">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#barba-wrapper">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          
+          <li><a href="#booking">Booking</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-follow">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="https://www.instagram.com/pixelarcadecore" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="mailto:contact@pixelarcadecore.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+  
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Pixel Arcade Core - All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript for Typing Effect -->
+  <script>
+    const typingText = "Empowering Ideas with Digital Creativity";
+    let index = 0;
+    const typingElement = document.getElementById("typing-text");
+
+    function type() {
+      if (index < typingText.length) {
+        typingElement.innerHTML += typingText.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+
+    window.onload = type;
+  </script>
+
+  <!-- GSAP and Barba Animations -->
+  <script src="app.js"></script>
+  
+</body>
+</html>
