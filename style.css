@@ -14,18 +14,26 @@ body {
 }
 
 /* Navbar */
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
 nav {
   background-color: #333;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* Logo Styling */
 .logo img {
   height: 50px;
   width: 50px;
@@ -35,6 +43,80 @@ nav {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Navbar Links (Desktop View) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Gradient Background on Hover */
+.nav-links li a:hover {
+  background: linear-gradient(to right, #f3c623, #a4e271, #69c4d4);
+  color: #333;
+}
+
+/* Hamburger Icon (Hidden on Desktop) */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide nav-links in mobile view */
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      padding-top: 60px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      transform: translateX(100%);
+  }
+  
+  /* Show menu icon in mobile view */
+  .menu-icon {
+      display: flex;
+  }
+
+  /* Show drawer when active */
+  .nav-links.active {
+      transform: translateX(0);
+  }
+
+  /* Adjust menu item styling */
+  .nav-links li {
+      margin: 20px 0;
+      text-align: center;
+  }
+
+  .nav-links li a {
+      font-size: 1.2rem;
+  }
+}
 nav ul {
   list-style: none;
   display: flex;
@@ -55,7 +137,6 @@ nav ul li a:hover {
   background: linear-gradient(to right, #f3c623, #a4e271, #69c4d4);
   color: #333;
 }
-
 /* Dropdown Menu */
 .dropdown {
   position: relative;

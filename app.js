@@ -21,6 +21,10 @@ shapes.forEach((shape, index) => {
     ease: settings.ease
   });
 });
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fade in each section on scroll

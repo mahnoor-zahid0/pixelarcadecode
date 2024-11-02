@@ -23,7 +23,12 @@
     <div class="logo">
       <img src="logo.png" alt="Pixel Arcade Core Logo">
     </div>
-    <ul>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
       <li><a href="index.html" data-barba="trigger">Home</a></li>
       <li><a href="index.html" data-barba="trigger">About</a></li>
       <li class="dropdown">
@@ -41,7 +46,6 @@
       <li><a href="#contact" data-barba="trigger">Contact</a></li>
     </ul>
   </nav>
-
   <!-- Barba.js Wrapper for Page Transitions -->
   <div id="barba-wrapper">
     <div class="barba-container" data-barba="container">
