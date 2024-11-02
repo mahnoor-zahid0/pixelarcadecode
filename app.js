@@ -21,9 +21,17 @@ shapes.forEach((shape, index) => {
     ease: settings.ease
   });
 });
+
+// Toggle dropdown in mobile view
+function toggleDropdown() {
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  dropdownMenu.classList.toggle('show');
+}
+
+// Toggle entire menu for mobile view
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
 }
 
 document.addEventListener("DOMContentLoaded", function () {

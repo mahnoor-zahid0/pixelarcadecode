@@ -64,14 +64,40 @@ nav {
   background: linear-gradient(to right, #f3c623, #a4e271, #69c4d4);
   color: #333;
 }
-
-/* Hamburger Icon (Hidden on Desktop) */
 .menu-icon {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1001; /* Higher than other elements */
 }
 
+.nav-links {
+  z-index: 1000;
+}
+/* Hamburger Icon (Hidden on Desktop) */
+.nav-links.active {
+  transform: translateX(0);
+  display: flex;
+}@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Initially hidden */
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      padding-top: 60px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      transform: translateX(100%); /* Off-screen initially */
+  }
+
+  .nav-links.active {
+      transform: translateX(0); /* Slide in when active */
+  }
+}
 .menu-icon .bar {
   width: 25px;
   height: 3px;
@@ -140,6 +166,13 @@ nav ul li a:hover {
 /* Dropdown Menu */
 .dropdown {
   position: relative;
+}
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
 }
 
 .dropdown-menu {
