@@ -14,17 +14,22 @@
     <div class="logo">
       <img src="logo.png" alt="Pixel Arcade Core Logo">
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">About</a></li>
-      <li><a href="index.html">Services</a></li>
-      <li><a href="index.html">Consult</a></li>
-      <li><a href="index.html">Contact</a></li>
+    <ul>
+      <li><a href="index.html" data-barba="trigger">Home</a></li>
+      <li><li><a href="index.html" data-barba="trigger">About</a></li></li>
+      <li class="dropdown">
+        <a href="#services" data-barba="trigger">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="web-development.html">Web Development</a></li>
+          <li><a href="android-development.html">Android Development</a></li>
+          <li><a href="ios-development.html">iOS Mobile Application</a></li>
+          <li><a href="hybrid-development.html">Hybrid App Development</a></li>
+          <li><a href="graphic-design.html">Graphic Designing</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html" data-barba="trigger">Consult</a></li>
+      <li><a href="index.html" data-barba="trigger">Contact</a></li>
     </ul>
   </nav>
 
