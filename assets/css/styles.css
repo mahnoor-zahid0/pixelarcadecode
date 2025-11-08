@@ -1196,25 +1196,37 @@ img {
     padding-bottom: 5rem;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(120deg, rgba(6, 8, 15, 0.96), rgba(19, 22, 36, 0.94));
+    background: linear-gradient(122deg, rgba(5, 7, 14, 0.96), rgba(16, 20, 30, 0.94));
   }
 
   .hero::before {
     content: "";
     position: absolute;
-    inset: -35% -55% -30%;
+    inset: -30% -42% -26%;
     background:
-      radial-gradient(circle at 26% 22%, rgba(127, 91, 255, 0.48), transparent 62%),
-      radial-gradient(circle at 76% 14%, rgba(64, 211, 253, 0.42), transparent 70%),
-      radial-gradient(circle at 54% 84%, rgba(255, 89, 193, 0.35), transparent 74%);
-    opacity: 0.75;
+      radial-gradient(circle at 28% 22%, rgba(127, 91, 255, 0.46), transparent 62%),
+      radial-gradient(circle at 74% 14%, rgba(64, 211, 253, 0.4), transparent 70%),
+      radial-gradient(circle at 54% 82%, rgba(255, 89, 193, 0.3), transparent 74%);
+    opacity: 0.7;
     pointer-events: none;
     z-index: 1;
-    transform: scale(1.12);
+    transform: scale(1.04);
   }
 
   .hero__visual {
-    display: none;
+    display: flex;
+    position: absolute;
+    inset: -16% -30% -18%;
+    transform: scale(0.8);
+    opacity: 0.52;
+    pointer-events: none;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hero__visual .floating-card {
+    display: block;
+    opacity: 0.82;
   }
 
   .hero__actions {
@@ -1261,7 +1273,7 @@ img {
   }
 
   .hero__copy h1 {
-    font-size: clamp(1.4rem, 10vw, 2.0rem);
+    font-size: clamp(1.35rem, 8.8vw, 2.1rem);
   }
 
   .hero__actions {
@@ -1273,9 +1285,19 @@ img {
   .hero__actions .btn {
     padding: 0.75rem 1.2rem;
     font-size: 0.95rem;
-    opacity: 0.9;
-    background: linear-gradient(135deg, rgba(72, 64, 128, 0.95), rgba(98, 72, 160, 0.85));
-    border: 1px solid rgba(146, 150, 188, 0.55);
+    opacity: 0.85;
+    background: linear-gradient(135deg, rgba(60, 54, 120, 0.9), rgba(92, 68, 150, 0.8));
+    border: 1px solid rgba(146, 150, 188, 0.5);
+  }
+
+  .hero__visual {
+    inset: -18% -30% -18%;
+    transform: scale(0.75);
+    opacity: 0.58;
+  }
+
+  .hero__visual .floating-card {
+    display: none;
   }
 }
 
