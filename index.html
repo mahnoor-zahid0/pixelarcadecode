@@ -1,246 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixel Arcade Core</title>
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- GSAP for animations -->
-  
-  <!-- Barba.js for smooth page transitions -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/@barba/core/2.9.7/barba.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome Icons -->
-
-</head>
-<body>
-
-  <!-- Navbar with Logo and Links -->
-  <nav>
-    <div class="logo">
-      <img src="logo.png" alt="Pixel Arcade Core Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelArcade Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-effects" aria-hidden="true">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+      <div class="grid-overlay"></div>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0);" onclick="toggleDropdown()">Services</a>
-        <ul class="dropdown-menu">
-          <li><a href="web-development.html">Web Development</a></li>
-          <li><a href="android-development.html">Android Development</a></li>
-          <li><a href="ios-development.html">iOS Mobile Application</a></li>
-          <li><a href="hybrid-development.html">Hybrid App Development</a></li>
-          <li><a href="graphic-design.html">Graphic Designing</a></li>
-          <li><a href="hosting.html">Hosting</a></li>
-        </ul>
-      </li>
-      <li><a href="#consult">Consult</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- Barba.js Wrapper for Page Transitions -->
-  <div id="barba-wrapper">
-    <div class="barba-container" data-barba="container">
 
-      <!-- Hero Section with Animated Text and Floating Shapes -->
-      <section id="hero">
-        <div class="floating-shapes">
-          <div class="shape shape1"></div>
-          <div class="shape shape2"></div>
-          <div class="shape shape3"></div>
-          <div class="shape shape4"></div>
-        </div>
-        <div class="overlay-text">
-          <h1 class="animate-text">Pixel Arcade Core</h1>
-          <p id="typing-text" class="animate-text"></p>
-        </div>
-      </section>
+    <header class="site-header">
+      <a href="#" class="logo" aria-label="PixelArcade home">
+        <img src="assets/img/logo.png" alt="" />
+        <span>PixelArcade</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="btn btn-outline">Let’s Talk</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
 
-      <!-- About Section -->
-      <section id="about">
-        <div class="about-container">
-          
-          <!-- Introductory Content with Light Background -->
-          <div class="about-intro">
-            <h2 class="about-title about-heading-gradient animate-text">ABOUT US</h2>
-            <p class="about-description animate-text">
-              <strong>At Pixel Arcade Core, we believe that every idea deserves to be brought to life with creativity, precision, and purpose.</strong> We are more than just a digital solutions company—we are storytellers, innovators, and dream builders. Our team of passionate designers, developers, and strategists are united by a single mission: to empower ideas through digital artistry and cutting-edge technology.
-            </p>
-            <p class="about-description animate-text">
-              From web and mobile applications to immersive graphics and hybrid platforms, we craft experiences that connect, inspire, and leave a lasting impression. We blend creativity with technical excellence to produce solutions that are not only functional but also captivating and impactful. Our approach is collaborative and personalized, ensuring that every project reflects the unique vision and needs of our clients.
-            </p>
+    <main>
+      <section class="hero" data-section-transition="up">
+        <div class="hero__copy" data-animate-3d="up" data-tilt>
+          <p class="eyebrow">Full-Spectrum Product Studio</p>
+          <h1>
+            Unified teams delivering
+            <span class="accent">web, mobile, and desktop</span> experiences
+          </h1>
+          <p class="lede">
+            From concept to code, we design, build, and launch high-impact digital
+            products. Web apps, native Android & iOS, desktop software, UI/UX, marketing,
+            SEO, and backend infrastructure—delivered by one integrated partner.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="#work">View Projects</a>
+            <a class="btn btn-secondary" href="#contact">Schedule a call</a>
           </div>
-          
-          <!-- "Why Us" Section with a Different Light Background -->
-          <div class="about-why-us">
-            <p class="about-description animate-text">
-              <strong>Why Pixel Arcade Core?</strong> Because we don’t just create digital products; we create digital experiences that elevate brands and bring them closer to their audiences. Innovation drives us, and quality defines us. When you partner with us, you’re not just choosing a service—you’re choosing a team that is as invested in your success as you are.
-            </p>
-            <p class="about-description animate-text">
-              Let’s build something extraordinary together. Welcome to Pixel Arcade Core, where ideas take shape, creativity has no limits, and possibilities are endless.
-            </p>
-          </div>
-          
         </div>
-      </section>
-      
-      <!-- Services Section -->
-      <section id="services">
-        <h2 class="services-title services-title-gradient">OUR SERVICES</h2>
-        <div class="services-grid">
-      
-          <!-- Service Cards without Background Images -->
-         <div class="service-card">
-            <div class="service-content">
-              <h3 >Web Development</h3>
-              <a href="web-development.html" class="details-button">Details</a>
+        <div class="hero__visual" data-animate-3d="right" data-tilt>
+          <div class="orb orb-lg"></div>
+          <div class="orb orb-sm"></div>
+          <div class="floating-card floating-card--primary">
+            <div class="floating-card__label">Live Prototype</div>
+            <div class="floating-card__value">3D Portfolio</div>
+            <div class="floating-card__progress">
+              <span style="width: 82%"></span>
             </div>
           </div>
-      
-          <div class="service-card">
-            <div class="service-content">
-              <h3>Android Development</h3>
-              <a href="android-development.html" class="details-button">Details</a>
-            </div>
-          </div>
-      
-          <div class="service-card">
-            <div class="service-content">
-              <h3>iOS Mobile Application</h3>
-              <a href="ios-development.html" class="details-button">Details</a>
-            </div>
-          </div>
-      
-          <div class="service-card">
-            <div class="service-content">
-              <h3>Hybrid App Development</h3>
-              <a href="hybrid-development.html" class="details-button">Details</a>
-            </div>
-          </div>
-      
-          <div class="service-card">
-            <div class="service-content">
-              <h3>Graphic Designing</h3>
-              <a href="graphic-design.html" class="details-button">Details</a>
-            </div>
-          </div>
-      
-          <div class="service-card">
-            <div class="service-content">
-              <h3>Hosting</h3>
-              <a href="hosting.html" class="details-button">Details</a>
-            </div>
+          <div class="floating-card floating-card--secondary">
+            <div class="floating-card__label">Interaction Speed</div>
+            <div class="floating-card__value">0.32s</div>
+            <div class="floating-card__meta">Optimized for performance</div>
           </div>
         </div>
       </section>
-      
-      <section id="consultation">
-        <div class="consultation-container">
-          <h2>Get Your Free Consultation</h2>
-          <p>At Pixel Arcade Core, we believe in helping you realize your ideas. Book a free consultation with us, where we’ll discuss your needs and provide expert guidance on how we can turn your vision into a reality. Our team is available 24/7 to assist you!</p>
-          <a href="#contact" class="consultation-button">Book a Consultation</a>
+
+      <section class="section" id="work" data-section-transition="right">
+        <div class="section__header" data-animate-3d="up">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Interfaces engineered to delight</h2>
+          <p>
+            A curated collection of immersive experiences for SaaS, agencies,
+            and creators who love cinematic web design.
+          </p>
+        </div>
+        <div class="project-grid" data-orb-container>
+          <span class="project-grid__orb" data-theme="blue" aria-hidden="true"></span>
+          <article
+            class="project-card"
+            tabindex="0"
+            data-orb-color="blue"
+            data-animate-3d="up"
+            data-tilt
+          >
+            <div class="project-card__meta">
+              <h3>Nova Labs</h3>
+              <p>Scientific storytelling with volumetric animation.</p>
+            </div>
+            <button class="project-card__cta">View case study</button>
+          </article>
+          <article
+            class="project-card"
+            tabindex="0"
+            data-orb-color="purple"
+            data-animate-3d="up"
+            data-tilt
+          >
+            <div class="project-card__meta">
+              <h3>Orbit Commerce</h3>
+              <p>Adaptive eCommerce UI with multi-platform handoff.</p>
+            </div>
+            <button class="project-card__cta">View case study</button>
+          </article>
+          <article
+            class="project-card"
+            tabindex="0"
+            data-orb-color="pink"
+            data-animate-3d="up"
+            data-tilt
+          >
+            <div class="project-card__meta">
+              <h3>Deepwave</h3>
+              <p>AI-powered media hub with realtime personalization.</p>
+            </div>
+            <button class="project-card__cta">View case study</button>
+          </article>
         </div>
       </section>
 
-      <!-- Portfolio Section -->
-      <section id="vision">
-  <h2>Our Vision</h2>
-  <div class="vision-content">
-    <div class="vision-item">
-      <p><strong>Innovation</strong>: We are driven by a commitment to innovate and push the boundaries of digital creativity. Our goal is to deliver solutions that are not only functional but also ahead of the curve.</p>
-    </div>
-    <div class="vision-item">
-      <p><strong>Quality</strong>: Quality is at the core of everything we do. We ensure that our services meet the highest standards, delivering exceptional results that leave a lasting impact.</p>
-    </div>
-    <div class="vision-item">
-      <p><strong>Customer-Centric Approach</strong>: Our clients are at the heart of our business. We listen, understand, and collaborate closely to bring their visions to life.</p>
-    </div>
-  </div>
-</section>
+      <section class="section section--capabilities" id="capabilities" data-section-transition="left">
+        <div class="section__header">
+          <p class="eyebrow">Capabilities</p>
+          <h2>One studio for every digital touchpoint</h2>
+          <p>
+            Cross-functional teams ship cohesive experiences across platforms while
+            sustaining growth through marketing and optimization.
+          </p>
+        </div>
+        <div class="grid-capabilities">
+          <article class="capability-card">
+            <h3>Web Platforms</h3>
+            <p>
+              Progressive web apps, SaaS dashboards, headless CMS solutions, and fast content sites.
+            </p>
+            <ul>
+              <li>React, Next.js, Vue</li>
+              <li>Design systems & accessibility</li>
+              <li>Performance optimization</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <h3>Mobile Apps</h3>
+            <p>
+              Native-quality experiences for Android and iOS with seamless handoffs and updates.
+            </p>
+            <ul>
+              <li>Swift, Kotlin, React Native</li>
+              <li>App Store & Play Store release</li>
+              <li>Cross-device QA automation</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <h3>Desktop Software</h3>
+            <p>
+              Desktop applications that feel at home on Windows, macOS, and Linux environments.
+            </p>
+            <ul>
+              <li>Electron & native frameworks</li>
+              <li>Offline-first architecture</li>
+              <li>Security and compliance</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <h3>UI/UX & Product</h3>
+            <p>
+              Human-centered research, prototyping, and motion systems that translate into code.
+            </p>
+            <ul>
+              <li>User research & testing</li>
+              <li>Interactive prototyping</li>
+              <li>Design ops & governance</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <h3>Backend & DevOps</h3>
+            <p>
+              Scalable architectures with 24/7 reliability, observability, and continuous delivery.
+            </p>
+            <ul>
+              <li>Node, Python, Go</li>
+              <li>Cloud-native infrastructure</li>
+              <li>API & data engineering</li>
+            </ul>
+          </article>
+          <article class="capability-card">
+            <h3>Marketing & SEO</h3>
+            <p>
+              Growth programs aligning paid, organic, and content strategy with measurable ROI.
+            </p>
+            <ul>
+              <li>SEO audits & schema</li>
+              <li>Campaign strategy & automation</li>
+              <li>Analytics & optimization</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-      
-  <!-- Footer Section -->
-  <footer id="contact">
-    <div class="footer-container">
-      <!-- Company Info -->
-      <div class="footer-info">
-        <img src="logo.png" alt="Pixel Arcade Core Logo" class="footer-logo">
-        <p>Pixel Arcade Core</p>
-        <p>Empowering Ideas with Digital Creativity</p>
+      <section class="section section--split" id="process" data-section-transition="right">
+        <div class="section__copy" data-animate-3d="left">
+          <p class="eyebrow">Process</p>
+          <h2>Every frame, intentional</h2>
+          <ul class="process-list">
+            <li>
+              <span class="step">01</span>
+              <div>
+                <h3>Discovery Sprints</h3>
+                <p>
+                  We align on narrative, aesthetic direction, and functional
+                  targets in a fast-paced workshop series.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step">02</span>
+              <div>
+                <h3>Immersive Prototyping</h3>
+                <p>
+                  Motion-first prototypes bring interactions to life long before
+                  development begins.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step">03</span>
+              <div>
+                <h3>Polished Delivery</h3>
+                <p>
+                  We ship performant, production-ready experiences with detailed
+                  documentation for your team.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="section__visual" data-animate-3d="right" data-tilt>
+          <div class="mockup">
+            <div class="mockup__header">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup__body">
+              <div class="mockup__sidebar">
+                <span class="mockup__sidebar-link mockup__sidebar-link--active"></span>
+                <span class="mockup__sidebar-link"></span>
+                <span class="mockup__sidebar-link"></span>
+                <span class="mockup__sidebar-link"></span>
+                <span class="mockup__sidebar-link"></span>
+              </div>
+              <div class="mockup__screen">
+                <div class="mockup__screen-hero">
+                  <span class="mockup__badge"></span>
+                  <span class="mockup__title"></span>
+                </div>
+                <div class="mockup__screen-grid">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup__screen-chart">
+                  <span class="mockup__chart-bar"></span>
+                  <span class="mockup__chart-bar"></span>
+                  <span class="mockup__chart-bar"></span>
+                  <span class="mockup__chart-bar"></span>
+                  <span class="mockup__chart-bar"></span>
+                </div>
+                <div class="mockup__screen-footer">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="mockup__footer">
+              <span class="pulse"></span>
+              <span class="pulse"></span>
+              <span class="pulse"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--services" id="services" data-section-transition="up">
+        <div class="services-grid" data-animate-3d="up">
+          <div class="services-grid__intro" data-tilt data-animate-3d="up">
+            <p class="eyebrow">Services</p>
+            <h2>Design and development in sync</h2>
+            <p>
+              End-to-end partnership for teams who value craft, speed, and
+              measurable outcomes.
+            </p>
+          </div>
+          <div class="service-card" data-tilt data-animate-3d="up">
+            <h3>Experience Design</h3>
+            <p>Brand systems, UI, and motion design that break the template.</p>
+            <ul>
+              <li>Research & narrative strategy</li>
+              <li>High-fidelity 3D & motion</li>
+              <li>Component design systems</li>
+            </ul>
+          </div>
+          <div class="service-card" data-tilt data-animate-3d="up">
+            <h3>Full-Stack Engineering</h3>
+            <p>Accessible, blazing-fast builds with production-ready code.</p>
+            <ul>
+              <li>React / Next.js development</li>
+              <li>API & microservice architecture</li>
+              <li>Headless CMS integration</li>
+            </ul>
+          </div>
+          <div class="service-card" data-tilt data-animate-3d="up">
+            <h3>Growth & Optimization</h3>
+            <p>Continuous iteration to keep your product evolving.</p>
+            <ul>
+              <li>Experimentation roadmap</li>
+              <li>SEO & content strategy</li>
+              <li>Data-driven optimization</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact" data-section-transition="up">
+      <div class="footer__brand">
+        <a href="#" class="logo" aria-label="PixelArcade home">
+          <img src="assets/img/logo.png" alt="" />
+          <span>PixelArcade</span>
+        </a>
+        <p>
+          A multidisciplinary studio helping teams turn imagination into digital
+          reality.
+        </p>
       </div>
-
-      <!-- Contact Details -->
-      <div class="footer-contact">
-        <p><i class="fas fa-map-marker-alt"></i> Mandi Bahauddin, Pakistan</p>
-        <p><i class="fas fa-phone-alt"></i> +92 344 6373796</p>
-        <p><i class="fas fa-phone-alt"></i> +92 316 7947578</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:pixelarcadecore@gmail.com">pixelarcadecore@gmail.com</a></p>
+      <form class="footer__form">
+        <label for="email" class="eyebrow">Start a project</label>
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@company.com"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+      <div class="footer__meta">
+        <p>© <span id="year"></span> PixelArcade Studio. All rights reserved.</p>
+        <div class="footer__links">
+          <a href="mailto:pixelarcadecore@gmail.com">
+            <span class="footer__link-icon">@</span>
+            pixelarcadecore@gmail.com
+          </a>
+          <a href="https://instagram.com/pixelarcadecore" target="_blank" rel="noreferrer">
+            <span class="footer__link-icon">IG</span>
+            @pixelarcadecore
+          </a>
+          <a href="tel:+923167947578">
+            <span class="footer__link-icon">☎</span>
+            +92 316 7947578
+          </a>
+        </div>
       </div>
+    </footer>
 
-      <!-- Navigation Links -->
-      <div class="footer-nav">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="#barba-wrapper">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-        </ul>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-quick-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#contact">Contact Us</a></li>
-          
-          <li><a href="#booking">Booking</a></li>
-          
-        </ul>
-      </div>
-
-      <!-- Social Media Links -->
-      <div class="footer-follow">
-        <h3>Follow Us</h3>
-        <ul class="social-icons">
-          <li><a href="https://www.instagram.com/pixelarcadecore" target="_blank"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="mailto:contact@pixelarcadecore.com"><i class="fas fa-envelope"></i></a></li>
-        </ul>
-      </div>
-  
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Pixel Arcade Core - All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <!-- Custom JavaScript for Typing Effect -->
-  <script>
-    const typingText = "Empowering Ideas with Digital Creativity";
-    let index = 0;
-    const typingElement = document.getElementById("typing-text");
-
-    function type() {
-      if (index < typingText.length) {
-        typingElement.innerHTML += typingText.charAt(index);
-        index++;
-        setTimeout(type, 100);
-      }
-    }
-
-    window.onload = type;
-  </script>
-
-  <!-- GSAP and Barba Animations -->
-  <script src="app.js"></script>
-  
-</body>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
+
