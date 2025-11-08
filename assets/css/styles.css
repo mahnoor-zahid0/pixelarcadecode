@@ -1249,6 +1249,7 @@ img {
   .hero {
     padding-top: 1.5rem;
     padding-bottom: 4.5rem;
+    overflow: hidden;
   }
 
   .hero::before {
@@ -1260,16 +1261,21 @@ img {
   }
 
   .hero__copy h1 {
-    font-size: clamp(1.4rem, 10vw, 2.6rem);
+    font-size: clamp(1.4rem, 10vw, 2.0rem);
   }
 
   .hero__actions {
     gap: 0.75rem;
+    position: relative;
+    z-index: 2;
   }
 
   .hero__actions .btn {
     padding: 0.75rem 1.2rem;
     font-size: 0.95rem;
+    opacity: 0.9;
+    background: linear-gradient(135deg, rgba(72, 64, 128, 0.95), rgba(98, 72, 160, 0.85));
+    border: 1px solid rgba(146, 150, 188, 0.55);
   }
 }
 
